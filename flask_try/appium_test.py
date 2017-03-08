@@ -21,7 +21,7 @@ class login(unittest.TestCase):
         desired_caps['waitappActivity'] ='com.veclink.microcomm.healthy/.main.activity.SplashActivity'
         desired_caps['unicodeKeyboard'] ='True'
         desired_caps['resetKeyboard'] ='True'
-        self.r = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+        self.r = webdriver.Remote('http://127.0.0.1:4725/wd/hub', desired_caps)
         print(u"1111")
 
     def tearDown(self):
@@ -35,16 +35,16 @@ class login(unittest.TestCase):
         print(u"333") 
         print(self.r.contexts)
         print(u"1111") 
-        sleep(3)
-        self.r.find_element_by_id('com.veclink.microcomm.healthy:id/login_username').send_keys(u"qqq@qq.com")
-        print(u"已输入账户")
-        self.r.find_element_by_id('com.veclink.microcomm.healthy:id/login_password').send_keys(u"123456")
-        print(u"已输入密码") 
-        self.r.press_keycode("4")
-        sleep(2)
-        self.r.find_element_by_class_name("android.widget.Button").click()
-        print(u"已点击登录") 
-        sleep(5)
+        # sleep(3)
+        # self.r.find_element_by_id('com.veclink.microcomm.healthy:id/login_username').send_keys(u"qqq@qq.com")
+        # print(u"已输入账户")
+        # self.r.find_element_by_id('com.veclink.microcomm.healthy:id/login_password').send_keys(u"123456")
+        # print(u"已输入密码")
+        # self.r.press_keycode("4")
+        # sleep(2)
+        # self.r.find_element_by_class_name("android.widget.Button").click()
+        # print(u"已点击登录")
+        # sleep(5)
         self.r.find_element_by_id('com.veclink.microcomm.healthy:id/tran_title_img_left').click()
         print(u"已点击头像") 
         sleep(1)
